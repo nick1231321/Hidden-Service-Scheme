@@ -1,0 +1,47 @@
+[package]
+name = "anonymous_service"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+anyhow = "1.0"
+bs58 = "0.4"
+num-bigint = { version = "0.4", features = ["rand"] }
+x25519-dalek = "2.0"
+aes-gcm = "0.10"       # AES-GCM authenticated encryption
+aes = "0.8"
+shamir = "1.0"
+rsa = { version = "0.9", features = ["serde","sha2"] }
+num-traits = "0.2"
+num-integer = "0.1"
+num-bigint-dig = "0.8"
+sharks = "0.5"
+
+nym-sdk = { git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+nym-client-core = { package = "nym-client-core", git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+nym-sphinx = { package = "nym-sphinx", git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+nym-task = { package = "nym-task", git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+nym-topology = { package = "nym-topology", git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+nym-crypto = { package = "nym-crypto", git = "https://github.com/nick1231321/nym_thesis", branch = "master" }
+sha2 = "0.10.9"
+hex = "0.4.3"
+base64 = "0.22.1"
+[features]
+default = [
+    "debug_anonymous_service_functionality",
+    "debug_anonymous_service_server_functionality",
+    "debug_requesting_authority_service",
+    "debug_requesting_anonymous_service_surbs"
+]
+
+debug_anonymous_service_functionality = []
+debug_anonymous_service_server_functionality = []
+debug_repliable_message_into_bytes = []
+debug_requesting_authority_service = []
+debug_requesting_anonymous_service_surbs = []

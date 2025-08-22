@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'anonymous_service'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=anonymous_service",
+                    "--package=anonymous_service"
+                ],
+                "filter": {
+                    "name": "anonymous_service",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'anonymous_service'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=anonymous_service",
+                    "--package=anonymous_service"
+                ],
+                "filter": {
+                    "name": "anonymous_service",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
