@@ -5,7 +5,7 @@ This project contains multiple Rust binaries that can be built using Cargo.
 ## Binaries
 - `anonymous_server`
 - `authority_server`
-- `anonymous`
+- `client`
 
 ## Building
 
@@ -14,7 +14,7 @@ To compile each binary, run:
 ```bash
 cargo build --bin anonymous_server
 cargo build --bin authority_server
-cargo build --bin anonymous
+cargo build --bin client
 ```
 
 For optimized release builds:
