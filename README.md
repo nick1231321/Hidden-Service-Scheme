@@ -17,14 +17,6 @@ cargo build --bin authority_server
 cargo build --bin client
 ```
 
-For optimized release builds:
-
-```bash
-cargo build --release --bin anonymous_server
-cargo build --release --bin authority_server
-cargo build --release --bin anonymous
-```
-
 The resulting binaries will be placed in `target/release`.
 
 ## Running
